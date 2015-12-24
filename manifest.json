@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	
+	"name": "NBA Recap",
+	"description": "Last night's or most recent NBA highlights.",
+	"version": "1.0",
+
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"activeTab"
+	],
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js" : ["jquery-1.11.3.min.js", "popup.js"]
+    }]
+}
